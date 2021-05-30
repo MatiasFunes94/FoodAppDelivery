@@ -1,13 +1,15 @@
 import React from 'react'
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
+
+import Container from '../../components/Container';
 
 export const HomeScreen = () => {
   return (
-    <View style={{flex: 1}}>
+    <Container>
       <Text>
         HomeScreen
       </Text>
-    </View>
+    </Container>
   )
 }
 
