@@ -1,11 +1,11 @@
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
 import { View, Text } from 'react-native';
+import { FONTS } from '../../constants';
 
 const InitialScreen = () => {
   return (
     <View>
-      <Text>InitialScreen</Text>
+      <Text style={FONTS.h2}>hola</Text>
     </View>
   )
 }
