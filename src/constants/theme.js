@@ -7,6 +7,8 @@ export const COLORS = {
   secondary: '#FE724C',
   dark: '#272D2F',
   light: '#D7D7D7',
+  white: '#fff',
+  black: '#000',
 }
 
 export const SIZES = {
@@ -15,6 +17,7 @@ export const SIZES = {
   font: 14,
   padding: 10,
   padding2: 12,
+  radius: 15,
 
   // font sizes
   largeTitle: 50,
@@ -31,6 +34,9 @@ export const SIZES = {
   // dimensions
   height,
   width,
+
+  // extra
+  row: { flexDirection: 'row' },
 }
 
 export const FONTS = {
