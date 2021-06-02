@@ -5,6 +5,7 @@ import {
 } from 'react-navigation';
 import InitialScreen from '../screens/InitialScreen';
 import HomeNavigator from './HomeNavigator';
+import { AuthScreen } from '../screens/AuthScreen';
 
 export default createAppContainer(
   createSwitchNavigator(
@@ -12,10 +13,10 @@ export default createAppContainer(
       // AuthLoading: splashscreen, //splashscreen
       FirstEnter: InitialScreen,
       App: HomeNavigator, //homenavigator
-      // Auth: AuthStack,
+      Auth: AuthScreen,
     },
     {
-      initialRouteName: 'FirstEnter',
+      initialRouteName: 'Auth',
     },
   ),
 );
