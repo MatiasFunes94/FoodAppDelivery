@@ -9,6 +9,7 @@ export const COLORS = {
   light: '#D7D7D7',
   white: '#fff',
   black: '#000',
+  light2: '#f7f7f7',
 }
 
 export const SIZES = {
