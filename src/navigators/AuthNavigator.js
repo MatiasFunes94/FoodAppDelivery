@@ -16,7 +16,7 @@ const TabsAuth = () => {
         labelStyle: { ...styles.labelStyle },
         indicatorStyle: { ...styles.indicator }
 
-      }} style={{ marginHorizontal: 20 }}>
+      }}>
         <TopTabsAuth.Screen name='Login' component={LoginScreen} />
         <TopTabsAuth.Screen name='Register' component={RegisterScreen} />
       </TopTabsAuth.Navigator>
@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     elevation: 0,
     paddingBottom: 5,
+    marginHorizontal: 20,
   },
   labelStyle: {
     fontSize: 14,

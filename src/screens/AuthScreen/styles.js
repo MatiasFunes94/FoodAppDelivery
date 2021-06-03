@@ -27,6 +27,14 @@ const styles = StyleSheet.create({
   containerAuth: {
     flex: 1,
     paddingHorizontal: 30,
+    paddingTop: 10,
+    backgroundColor: COLORS.light2,
+  },
+  buttonLoginRegister: {
+    width: '100%', 
+    alignSelf: 'center',
+    marginBottom: 30,
+    marginTop: 10,
   }
 })
 
