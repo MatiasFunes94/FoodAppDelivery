@@ -45,13 +45,13 @@ export const LoginScreen = () => {
       <View>
       <Input
         title={'Email address'}
-        placeholder={'Insert your email'}
+        placeholder={'Insert email'}
         value={inputEmailLogin}
         onChangeText={setInputEmailLogin}
       />
       <Input
         title={'Password'}
-        placeholder={'Insert your password'}
+        placeholder={'Insert password'}
         value={inputPasswordLogin}
         onChangeText={setInputPasswordLogin}
       />
@@ -70,36 +70,32 @@ export const RegisterScreen = () => {
   const [inputPasswordRegister, setInputPasswordRegister] = useState('');
   return (
     <View style={styles.lightBackground}>
-      {/* <KeyboardAvoidingView>
-        <ScrollView> */}
       <View style={styles.containerAuth}>
         <View>
           <Input
             title={'Name'}
-            placeholder={'Insert your name'}
+            placeholder={'Insert name'}
             value={inputNameRegister}
             onChangeText={setInputNameRegister}
           />
           <Input
             title={'Email address'}
-            placeholder={'Insert your email'}
+            placeholder={'Insert email'}
             value={inputEmailRegister}
             onChangeText={setInputEmailRegister}
           />
           <Input
             title={'Password'}
-            placeholder={'Insert your password'}
+            placeholder={'Insert password'}
             value={inputPasswordRegister}
             onChangeText={setInputPasswordRegister}
           />
         </View>
         <Button
-          children={'Login'}
+          children={'Register'}
           customStyle={styles.buttonLoginRegister}
         />
       </View>
-      {/* </ScrollView>
-      </KeyboardAvoidingView> */}
     </View>
   );
 };
