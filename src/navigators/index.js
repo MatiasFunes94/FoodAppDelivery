@@ -16,7 +16,7 @@ export default createAppContainer(
       Auth: AuthScreen,
     },
     {
-      initialRouteName: 'Auth',
+      initialRouteName: 'App',
     },
   ),
 );
