@@ -2,6 +2,10 @@ apply plugin: "com.android.application"
 
 import com.android.build.OutputFile
 
+project.ext.react = [
+  enableHermes: true  // <- here | clean and rebuild if changing
+]
+
 project.ext.vectoricons = [
     iconFontNames: [ 'Ionicons.ttf' ] // Name of the font files you want to copy
 ]
