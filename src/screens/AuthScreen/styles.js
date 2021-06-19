@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingTop: 10,
     backgroundColor: COLORS.light2,
+    justifyContent: 'space-between'
   },
   buttonLoginRegister: {
     width: '100%', 
