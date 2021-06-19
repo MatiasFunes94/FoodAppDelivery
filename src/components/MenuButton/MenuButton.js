@@ -1,15 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 
 import styles from './styles';
 
 const MenuButton = () => {
   return (
-    <View style={styles.container}>
+    <TouchableOpacity 
+      style={styles.container}
+      activeOpacity={0.5}
+    >
       <View style={{...styles.item, width: 17, alignSelf: 'flex-end'}} />
       <View style={{...styles.item, width: 30}} />
       <View style={{...styles.item, width: 17}} />
-    </View>
+    </TouchableOpacity>
   )
 }
 
