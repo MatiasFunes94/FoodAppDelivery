@@ -8,12 +8,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 20,
+    paddingVertical: 20,
   },
   userImage: {
     width: 40,
-    height: 40
-  }
-})
+    height: 40,
+  },
+  containerTitle: {
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  emojiTongue: {
+    width: 30,
+    height: 30,
+    marginLeft: 10,
+  },
+});
 
 export default styles;

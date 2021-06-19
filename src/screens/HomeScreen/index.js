@@ -6,7 +6,7 @@ import Location from '../../components/Location';
 import MenuButton from '../../components/MenuButton';
 
 import styles from './styles';
-import { images } from '../../constants';
+import { images, FONTS, SIZES } from '../../constants';
 
 export const HomeScreen = () => {
   return (
@@ -18,6 +18,20 @@ export const HomeScreen = () => {
           source={images.user}
           style={styles.userImage} 
         />
+      </View>
+      <View>
+        <Text style={{...FONTS.h1}}>
+          Online Food
+        </Text>
+        <View style={styles.containerTitle}>
+          <Text style={{...FONTS.body1}}>
+            Delivery!
+          </Text>
+          <Image 
+            source={images.emojiTongue}
+            style={styles.emojiTongue}
+          />
+        </View>
       </View>
     </Container>
   )
