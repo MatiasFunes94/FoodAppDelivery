@@ -8,6 +8,13 @@ const pizzaIcon = require('../../assets/images/pizza-icon.png')
 const pastaIcon = require('../../assets/images/pasta-icon.png')
 const iceCreamIcon = require('../../assets/images/ice-cream-icon.png')
 const beerWineIcon = require('../../assets/images/beer-wine-icon.png')
+const fireIcon = require('../../assets/images/fire-icon.jpg')
+
+const burguerMeat = require('../../assets/images/burguers/burguer-1.jpg')
+const burguerChicken = require('../../assets/images/burguers/burguer-2.jpg')
+const burguerEgg = require('../../assets/images/burguers/burguer-3.jpg')
+const burguerOnion = require('../../assets/images/burguers/burguer-4.jpg')
+const burguerVeggie = require('../../assets/images/burguers/burguer-5.jpg')
 
 export default {
   chef,
@@ -20,4 +27,10 @@ export default {
   pastaIcon,
   iceCreamIcon,
   beerWineIcon,
+  burguerMeat,
+  burguerChicken,
+  burguerEgg,
+  burguerOnion,
+  burguerVeggie,
+  fireIcon,
 }
