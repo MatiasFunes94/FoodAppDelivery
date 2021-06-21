@@ -8,6 +8,8 @@ const styles = StyleSheet.create({
     width: 180,
     height: 330,
     backgroundColor: COLORS.white,
+    borderColor: COLORS.light,
+    borderWidth: 0.5,
   },
   imageFood: {
     height: 200,

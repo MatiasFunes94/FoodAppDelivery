@@ -27,7 +27,6 @@ export const HomeScreen = () => {
   const refTranslateX = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler(event => {
-    console.log(event.contentOffset.x);
     refTranslateX.value = event.contentOffset.x;
   });
 
@@ -35,8 +34,7 @@ export const HomeScreen = () => {
 
   const handleSelectTypeFood = typeFoodSelected => {
     setTypeFood(typeFoodSelected);
-  };  
-
+  };
   return (
     <Container customStyle={styles.container}>
       <View style={styles.containerHeader}>
@@ -76,7 +74,7 @@ export const HomeScreen = () => {
               activeOpacity={0.5}
               onPress={() => handleSelectTypeFood(item.icon)}>
               <Image source={item.icon} style={{height: 30, width: 30}} />
-              <View style={{width: 15}} />
+              <View style={{width: 10}} />
               <Text adjustsFontSizeToFit numberOfLines={1}>
                 {item.name}
               </Text>
@@ -84,9 +82,10 @@ export const HomeScreen = () => {
           )}
         />
       </View>
-      <View>
+      <View style={{marginBottom: 75}}>
         <Animated.ScrollView
           horizontal
+          showsHorizontalScrollIndicator={false}
           onScroll={scrollHandler}
           contentContainerStyle={{height: 380, alignItems: 'center'}}
         >
