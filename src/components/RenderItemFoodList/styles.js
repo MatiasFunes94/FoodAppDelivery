@@ -4,7 +4,9 @@ import { FONTS, COLORS } from '../../constants';
 const styles = StyleSheet.create({
   containerFoodList: {
     borderRadius: 20,
-    marginHorizontal: 10,
+    marginVertical: 10,
+    marginRight: 10,
+    marginLeft: 5,
     width: 180,
     height: 330,
     backgroundColor: COLORS.white,

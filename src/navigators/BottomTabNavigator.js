@@ -24,7 +24,7 @@ const Tab = createBottomTabNavigator();
 const BottomTabs = () => {
 
   const tabOffsetValue = useRef(new Animated.Value(0)).current;
-  console.log('tabOffsetValue', tabOffsetValue)
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -37,13 +37,11 @@ const BottomTabs = () => {
           component={HomeNavigator}
           options={{
             tabBarIcon: ({focused}) => (
-              <View>
-                <Icon
-                  name="home-outline"
-                  size={25}
-                  color={focused ? COLORS.primary : COLORS.light}
-                />
-              </View>
+              <Icon
+                name="home-outline"
+                size={25}
+                color={focused ? COLORS.primary : COLORS.light}
+              />
             ),
           }}
           listeners={({navigation, route}) => ({
@@ -141,7 +139,6 @@ const BottomTabs = () => {
       <Animated.View
         style={{...styles.lineTab, transform: [{ translateX: tabOffsetValue }]}}
       >
-
       </Animated.View>
     </NavigationContainer>
   );
@@ -159,7 +156,7 @@ const styles = StyleSheet.create({
   containerNavigator: {
     backgroundColor: COLORS.white,
     position: 'absolute',
-    bottom: 30,
+    bottom: 15,
     marginHorizontal: 30,
     height: 60,
     borderRadius: 10,
@@ -182,7 +179,7 @@ const styles = StyleSheet.create({
     height: 2.5,
     backgroundColor: COLORS.primary,
     position: 'absolute',
-    bottom: 87,
+    bottom: 72,
     left: 60,
     borderRadius: 50,
   },

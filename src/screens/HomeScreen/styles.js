@@ -37,12 +37,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 55,
     backgroundColor: COLORS.white,
+    borderColor: COLORS.light,
+    borderWidth: 0.5,
   },
   searchIcon: {
     marginLeft: 10,
   },
   searchTextInput: {
-    marginLeft: 20,
+    marginLeft: 10,
+    color: COLORS.dark,
   },
   containerChips: {
     flexDirection: 'row',
@@ -50,10 +53,11 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'space-around',
-    margin: 10,
+    marginRight: 10,
+    marginVertical: 10,
     padding: 10,
     borderColor: COLORS.light,
-    borderWidth: 1,
+    borderWidth: 0.5,
   },
 });
 
