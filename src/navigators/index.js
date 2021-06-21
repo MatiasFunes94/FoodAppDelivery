@@ -4,7 +4,7 @@ import {
   createAppContainer,
 } from 'react-navigation';
 import InitialScreen from '../screens/InitialScreen';
-import HomeNavigator from './HomeNavigator';
+import BottomTabs from './BottomTabNavigator';
 import { AuthScreen } from '../screens/AuthScreen';
 
 export default createAppContainer(
@@ -12,7 +12,7 @@ export default createAppContainer(
     {
       // AuthLoading: splashscreen, //splashscreen
       FirstEnter: InitialScreen,
-      App: HomeNavigator, //homenavigator
+      App: BottomTabs,
       Auth: AuthScreen,
     },
     {

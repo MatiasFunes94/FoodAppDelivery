@@ -49,9 +49,11 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 12,
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     margin: 10,
     padding: 10,
+    borderColor: COLORS.light,
+    borderWidth: 1,
   },
 });
 
