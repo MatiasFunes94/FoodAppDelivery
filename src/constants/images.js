@@ -16,6 +16,18 @@ const burguerEgg = require('../../assets/images/burguers/burguer-3.jpg')
 const burguerOnion = require('../../assets/images/burguers/burguer-4.jpg')
 const burguerVeggie = require('../../assets/images/burguers/burguer-5.jpg')
 
+const pizza1 = require('../../assets/images/pizzas/pizza-1.jpeg')
+const pizza2 = require('../../assets/images/pizzas/pizza-2.jpg')
+const pizza3 = require('../../assets/images/pizzas/pizza-3.jpg')
+const pizza4 = require('../../assets/images/pizzas/pizza-4.jpg')
+const pizza5 = require('../../assets/images/pizzas/pizza-5.jpg')
+
+const pasta1 = require('../../assets/images/pasta/pasta-1.jpg')
+const pasta2 = require('../../assets/images/pasta/pasta-2.jpg')
+const pasta3 = require('../../assets/images/pasta/pasta-3.jpg')
+const pasta4 = require('../../assets/images/pasta/pasta-4.jpg')
+const pasta5 = require('../../assets/images/pasta/pasta-5.jpg')
+
 export default {
   chef,
   burgerIcon,
@@ -33,4 +45,14 @@ export default {
   burguerOnion,
   burguerVeggie,
   fireIcon,
+  pizza1,
+  pizza2,
+  pizza3,
+  pizza4,
+  pizza5,
+  pasta1,
+  pasta2,
+  pasta3,
+  pasta4,
+  pasta5,
 }

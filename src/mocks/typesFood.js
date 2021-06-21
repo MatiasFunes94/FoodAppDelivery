@@ -3,23 +3,23 @@ import { images } from '../constants';
 const typesFood = [
   {
     icon: images.burgerIcon2,
-    name: 'Burguer'
+    name: 'burguer'
   },
   {
     icon: images.pizzaIcon,
-    name: 'Pizza'
+    name: 'pizza'
   },
   {
     icon: images.pastaIcon,
-    name: 'Pasta'
+    name: 'pasta'
   },
   {
     icon: images.iceCreamIcon,
-    name: 'Ice cream'
+    name: 'ice cream'
   },
   {
     icon: images.beerWineIcon,
-    name: 'Drinks'
+    name: 'drinks'
   },
 ]
 

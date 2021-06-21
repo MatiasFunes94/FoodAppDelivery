@@ -21,7 +21,7 @@ const RenderItemFoodList = ({item, index, refTranslateX}) => {
     const opacity = interpolate(
       refTranslateX.value,
       inputRange,
-      [0.5, 1, 0.5],
+      [0.5, 1, 0.7],
       Extrapolate.CLAMP,
     );
 

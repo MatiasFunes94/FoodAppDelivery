@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   TextInput,
   FlatList,
   TouchableOpacity,
+  Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Animated, {
@@ -21,7 +22,9 @@ import RenderItemFoodList from '../../components/RenderItemFoodList';
 import styles from './styles';
 import {images, FONTS, COLORS} from '../../constants';
 import typesFoodMock from '../../mocks/typesFood';
-import burguersMock from '../../mocks/Burguers';
+import foodMock from '../../mocks/FoodMock';
+
+const { width } = Dimensions.get('window');
 
 export const HomeScreen = () => {
   const refTranslateX = useSharedValue(0);
@@ -30,11 +33,25 @@ export const HomeScreen = () => {
     refTranslateX.value = event.contentOffset.x;
   });
 
-  const [typeFood, setTypeFood] = useState(images.burgerIcon2);
+  const refScrollView = useRef();
+
+  const [typeFood, setTypeFood] = useState({
+    image: images.burgerIcon2,
+    name: 'burguer'
+  });
 
   const handleSelectTypeFood = typeFoodSelected => {
     setTypeFood(typeFoodSelected);
+    refScrollView.current?.scrollTo({
+      y : 0,
+      animated : true
+  });
   };
+
+  let arrayData = foodMock.filter((food) => food.type === typeFood.name)
+
+  arrayData = [...arrayData, { id: 'right-spacer' }]
+
   return (
     <Container customStyle={styles.container}>
       <View style={styles.containerHeader}>
@@ -59,7 +76,7 @@ export const HomeScreen = () => {
           />
         </View>
       </View>
-      <View>
+      <View style={{marginTop: 10}}>
         <FlatList
           data={typesFoodMock}
           horizontal
@@ -69,13 +86,20 @@ export const HomeScreen = () => {
               style={{
                 ...styles.containerChips,
                 backgroundColor:
-                  item.icon === typeFood ? COLORS.primary : COLORS.white,
+                  item.icon === typeFood.image ? COLORS.primary : COLORS.white,
               }}
               activeOpacity={0.5}
-              onPress={() => handleSelectTypeFood(item.icon)}>
+              onPress={() => handleSelectTypeFood({
+                image: item.icon,
+                name: item.name,
+              })}>
               <Image source={item.icon} style={{height: 30, width: 30}} />
               <View style={{width: 10}} />
-              <Text adjustsFontSizeToFit numberOfLines={1}>
+              <Text
+                adjustsFontSizeToFit
+                numberOfLines={1}
+                style={{textTransform: 'capitalize'}}
+              >
                 {item.name}
               </Text>
             </TouchableOpacity>
@@ -84,12 +108,17 @@ export const HomeScreen = () => {
       </View>
       <View style={{marginBottom: 75}}>
         <Animated.ScrollView
+          ref={refScrollView}
+          onContentSizeChange={() => refScrollView.current.scrollToEnd({ animated: true })}
           horizontal
           showsHorizontalScrollIndicator={false}
           onScroll={scrollHandler}
           contentContainerStyle={{height: 380, alignItems: 'center'}}
         >
-          {burguersMock.map((item, index) => {
+          {arrayData.map((item, index) => {
+            if (item.id.includes('spacer')) {
+              return <View key={item.id} style={{width: width * 0.35}} />
+            }
             return (
               <RenderItemFoodList
                 key={item.id}
