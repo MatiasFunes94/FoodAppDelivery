@@ -69,11 +69,6 @@ export const HomeScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.containerSearch} onPress={() => navigation.navigate('Search')}>
         <View style={styles.containerSubSearch}>
           <Icon name={'search'} size={30} style={styles.searchIcon} />
-          {/* <TextInput
-            placeholder={'Search your fav food'}
-            placeholderTextColor={COLORS.light}
-            style={styles.searchTextInput}
-          /> */}
           <Text style={styles.searchTextInput}>Search your fav food</Text>
         </View>
       </TouchableOpacity>
