@@ -45,6 +45,12 @@ const BottomTabs = () => {
             ),
           }}
           listeners={({navigation, route}) => ({
+            focus: e => {
+              Animated.spring(tabOffsetValue, {
+                toValue: 0,
+                useNativeDriver: true,
+              }).start();
+            },
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
                 toValue: 0,
@@ -68,6 +74,12 @@ const BottomTabs = () => {
             ),
           }}
           listeners={({navigation, route}) => ({
+            focus: e => {
+              Animated.spring(tabOffsetValue, {
+                toValue: getWidth(),
+                useNativeDriver: true,
+              }).start();
+            },
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
                 toValue: getWidth(),
@@ -104,6 +116,12 @@ const BottomTabs = () => {
             ),
           }}
           listeners={({navigation, route}) => ({
+            focus: e => {
+              Animated.spring(tabOffsetValue, {
+                toValue: getWidth() * 3,
+                useNativeDriver: true,
+              }).start();
+            },
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
                 toValue: getWidth() * 3,
@@ -127,6 +145,12 @@ const BottomTabs = () => {
             ),
           }}
           listeners={({navigation, route}) => ({
+            focus: e => {
+              Animated.spring(tabOffsetValue, {
+                toValue: getWidth() * 4,
+                useNativeDriver: true,
+              }).start();
+            },
             tabPress: e => {
               Animated.spring(tabOffsetValue, {
                 toValue: getWidth() * 4,

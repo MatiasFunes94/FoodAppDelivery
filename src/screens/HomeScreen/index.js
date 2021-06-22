@@ -26,7 +26,7 @@ import foodMock from '../../mocks/FoodMock';
 
 const { width } = Dimensions.get('window');
 
-export const HomeScreen = () => {
+export const HomeScreen = ({ navigation }) => {
   const refTranslateX = useSharedValue(0);
 
   const scrollHandler = useAnimatedScrollHandler(event => {
@@ -66,20 +66,22 @@ export const HomeScreen = () => {
           <Image source={images.emojiTongue} style={styles.emojiTongue} />
         </View>
       </View>
-      <View style={styles.containerSearch}>
+      <TouchableOpacity style={styles.containerSearch} onPress={() => navigation.navigate('Search')}>
         <View style={styles.containerSubSearch}>
           <Icon name={'search'} size={30} style={styles.searchIcon} />
-          <TextInput
+          {/* <TextInput
             placeholder={'Search your fav food'}
             placeholderTextColor={COLORS.light}
             style={styles.searchTextInput}
-          />
+          /> */}
+          <Text style={styles.searchTextInput}>Search your fav food</Text>
         </View>
-      </View>
+      </TouchableOpacity>
       <View style={{marginTop: 10}}>
         <FlatList
           data={typesFoodMock}
           horizontal
+          showsHorizontalScrollIndicator={false}
           keyExtractor={item => String(item.name)}
           renderItem={({item}) => (
             <TouchableOpacity
@@ -109,8 +111,9 @@ export const HomeScreen = () => {
       <View style={{marginBottom: 75}}>
         <Animated.ScrollView
           ref={refScrollView}
-          onContentSizeChange={() => refScrollView.current.scrollToEnd({ animated: true })}
           horizontal
+          snapToInterval={195}
+          decelerationRate='fast'
           showsHorizontalScrollIndicator={false}
           onScroll={scrollHandler}
           contentContainerStyle={{height: 380, alignItems: 'center'}}
