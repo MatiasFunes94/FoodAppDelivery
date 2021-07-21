@@ -13,7 +13,7 @@ import {
   images,
 } from '../../constants';
 
-const InitialScreen = () => {
+const InitialScreen = ({navigation}) => {
   return (
     <Container customStyle={styles.containerCustomStyle}>
       <View style={styles.container}>
@@ -63,6 +63,7 @@ const InitialScreen = () => {
             iconName={'arrow-forward'}
             iconColor={COLORS.white}
             iconSize={22}
+            onPress={() => navigation.navigate('App')}
           />
         </View>
       </View>

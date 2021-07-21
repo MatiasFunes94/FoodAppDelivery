@@ -15,6 +15,7 @@ export const Button = ({
   iconName = null,
   iconColor = null,
   iconSize = 20,
+  onPress,
 }) => {
   return (
     <View>
@@ -23,7 +24,9 @@ export const Button = ({
         style={{
           ...styles.touchableButton,
           ...customStyle,
-        }}>
+        }}
+        onPress={onPress}
+        >
         <Text
           style={{
             ...styles.textButton,
